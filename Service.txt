@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: s1
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    key: pn  # Match this with the Deployment labels
+  type: NodePort
