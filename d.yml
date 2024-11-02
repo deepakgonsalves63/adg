@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dep
+  name: dep1
 spec:
   replicas: 2
   selector:
@@ -13,10 +13,10 @@ spec:
         key: pn  # Ensure this label matches the service selector
     spec:
       containers:
-        - name: c1
+        - name: c11
           image: deepakgonsalves63/web2  # Ensure this image has the Django app
           #command: ["/bin/bash", "-c", "while true; do echo run every 5 sec; sleep 5 ; done"]
           ports:
             - containerPort: 80
       nodeSelector:
-        lbl: slave2
+        lbl: slave1
