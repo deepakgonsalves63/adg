@@ -15,7 +15,7 @@ spec:
       containers:
         - name: c1
           image: deepakgonsalves63/web1  # Ensure this image has the Django app
-          command: ["/bin/bash", "-c", "while true; do echo run every 5 sec; sleep 5 ; done"]
+          #command: ["/bin/bash", "-c", "while true; do echo run every 5 sec; sleep 5 ; done"]
           ports:
             - containerPort: 80
       nodeSelector:
